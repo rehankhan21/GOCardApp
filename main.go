@@ -15,8 +15,11 @@ func main() {
 	// fmt.Println(card)
 
 	cards := []string{newCard(), newCard()}
+	cards = append(cards, "Six of Spades")
 
-	fmt.Println(cards)
+	for i, card := range cards {
+		fmt.Println(i, card)
+	}
 }
 
 // must put return type like java
