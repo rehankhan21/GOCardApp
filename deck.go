@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"strings"
 )
 
@@ -46,4 +47,9 @@ func deal(d deck, handSize int) (deck, deck) {
 
 func (d deck) toString() string {
 	return strings.Join([]string(d), ",")
+}
+
+func (d deck) saveToFile(fileName string) error {
+	// last arugment is permission, default perm is 0666 anyone can read or write that file
+	return ioutil.WriteFile(fileName, []byte(d.toString()), 0666)
 }
