@@ -12,6 +12,9 @@ func newDeck() deck {
 	cardSuits := []string{"Spades", "Diamonds", "Hearts", "Clubs"}
 	cardValues := []string{"Ace", "Two", "Three", "Four"}
 
+	// Select a specific range from a slice fruits[startIndexIncluding : upToNotIncluding]
+	// can also do slice[2:] or slice[:2]
+
 	// whenever we have a variable we dont use in loops, we just replace it with _
 	for _, suit := range cardSuits {
 		for _, value := range cardValues {
@@ -31,4 +34,9 @@ func (d deck) print() {
 	for i, card := range d {
 		fmt.Println(i, card)
 	}
+}
+
+// returning multiple values, this tells us we are turning 2 things of type deck
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
 }

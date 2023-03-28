@@ -12,19 +12,27 @@ func main() {
 
 	// fmt.Println(card)
 
-	cards := deck{newCard(), newCard()}
-	cards = append(cards, "Six of Spades")
+	//cards := deck{newCard(), newCard()}
+	//cards = append(cards, "Six of Spades")
 
 	// range is a keyword when we want to iterate through the slice
 	// for i, card := range cards {
 	// 	fmt.Println(i, card)
 	// }
 
+	cards := newDeck()
+
 	cards.print()
+
+	// we are initizling and assigning at the sametime from a func return val
+	hand, remainingCards := deal(cards, 5)
+
+	hand.print()
+	remainingCards.print()
 }
 
 // must put return type like java
-func newCard() string {
+// func newCard() string {
 
-	return "Five of Diamonds"
-}
+// 	return "Five of Diamonds"
+// }
