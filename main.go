@@ -1,10 +1,8 @@
 package main
 
-import "fmt"
-
 func main() {
 	// static type like java
-	//var card string = "Ace of Spades"
+	// var card string = "Ace of Spades"
 
 	// dynamic type like javascript
 	// only := when initilzing the var for the first time
@@ -14,12 +12,15 @@ func main() {
 
 	// fmt.Println(card)
 
-	cards := []string{newCard(), newCard()}
+	cards := deck{newCard(), newCard()}
 	cards = append(cards, "Six of Spades")
 
-	for i, card := range cards {
-		fmt.Println(i, card)
-	}
+	// range is a keyword when we want to iterate through the slice
+	// for i, card := range cards {
+	// 	fmt.Println(i, card)
+	// }
+
+	cards.print()
 }
 
 // must put return type like java
