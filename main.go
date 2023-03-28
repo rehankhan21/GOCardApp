@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	// static type like java
 	// var card string = "Ace of Spades"
@@ -20,15 +22,22 @@ func main() {
 	// 	fmt.Println(i, card)
 	// }
 
+	// Type coversion in go, type we want(value we have)
+	// []byte("Hello World")
+	// greeting := "hello"
+	// fmt.Println([]byte(greeting))
+
 	cards := newDeck()
 
-	cards.print()
+	fmt.Println(cards.toString())
+
+	// cards.print()
 
 	// we are initizling and assigning at the sametime from a func return val
-	hand, remainingCards := deal(cards, 5)
+	// hand, remainingCards := deal(cards, 5)
 
-	hand.print()
-	remainingCards.print()
+	// hand.print()
+	// remainingCards.print()
 }
 
 // must put return type like java
