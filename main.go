@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	// static type like java
 	// var card string = "Ace of Spades"
@@ -29,7 +27,7 @@ func main() {
 
 	cards := newDeck()
 
-	fmt.Println(cards.toString())
+	cards.saveToFile("my_cards")
 
 	// cards.print()
 
