@@ -25,9 +25,8 @@ func main() {
 	// greeting := "hello"
 	// fmt.Println([]byte(greeting))
 
-	cards := newDeck()
-
-	cards.saveToFile("my_cards")
+	// cards := newDeckFromFile("my_card")
+	// cards.print()
 
 	// cards.print()
 
@@ -36,6 +35,10 @@ func main() {
 
 	// hand.print()
 	// remainingCards.print()
+
+	cards := newDeck()
+	cards.shuffle()
+	cards.print()
 }
 
 // must put return type like java
