@@ -25,7 +25,7 @@ func newDeck() deck {
 	// whenever we have a variable we dont use in loops, we just replace it with _
 	for _, suit := range cardSuits {
 		for _, value := range cardValues {
-			cards = append(cards, value + " of  " + suit)
+			cards = append(cards, value + " of " + suit)
 		}
 	}
 
